@@ -1,6 +1,6 @@
 let value;
-const response = await fetch('https://free.currconv.com/api/v7/convert?q=USD_COP&compact=ultra&apiKey=fce473c88ab0c897391f')
-await response.json().then(x => value = x.USD_COP)
+/*const response = await fetch('https://free.currconv.com/api/v7/convert?q=USD_COP&compact=ultra&apiKey=fce473c88ab0c897391f')
+await response.json().then(x => value = x.USD_COP)*/
 value = 75000 / 25
 export const load = () => {
 
