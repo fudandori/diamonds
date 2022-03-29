@@ -1,6 +1,7 @@
 let value;
 const response = await fetch('https://free.currconv.com/api/v7/convert?q=USD_COP&compact=ultra&apiKey=fce473c88ab0c897391f')
-const data = await response.json().then(x => value = x.USD_COP)
+await response.json().then(x => value = x.USD_COP)
+value = 75000 / 25
 export const load = () => {
 
     let html = '';
@@ -17,7 +18,7 @@ export const load = () => {
             const e = element.children[j];
             const diam = 5000 + 1000 * i
             if (j % 2 === 0) e.innerHTML = diam
-            else e.innerHTML = (diam / 200 * value * 0.847025).toFixed(0)
+            else e.innerHTML = (diam / 200 * value).toFixed(0)
 
         }
     }
